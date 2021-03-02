@@ -4,16 +4,26 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <form>
-      <label class="nameLabel">Name</label>
-      <input type="text" class="name" placeholder="enter your name" /><br />
-      <label class="phoneLabel">Phone Number</label>
-      <input type="tel" class="phone" placeholder="enter your number" /><br />
-      <label class="emailLabel">E-mail</label>
-      <input type="mail" class="mail" placeholder="enter your E-mail" /><br />
-      <input type="submit" id="submit" onclick="submit()" />
-    </form>
-    <div class="tabelDiv"></div>
+    <main>
+      <div>
+        <label class="nameLabel">Name</label>
+        <input type="text" class="name" placeholder="enter your name" /><br />
+        <label class="phoneLabel">Phone Number</label>
+        <input type="tel" class="phone" placeholder="enter your number" /><br />
+        <label class="emailLabel">E-mail</label>
+        <input type="mail" class="mail" placeholder="enter your E-mail" /><br />
+        <input type="submit" id="submit" />
+      </div>
+      <div class="tabelDiv">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Phone-Number</th>
+            <th>E-mail</th>
+          </tr>
+        </table>
+      </div>
+    </main>
     <script src="./app.js"></script>
   </body>
 </html>
