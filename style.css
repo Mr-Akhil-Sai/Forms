@@ -4,7 +4,7 @@
   margin: 0;
 }
 main {
-  margin: 1em;
+  margin: 2em;
   display: flex;
   justify-content: space-between;
 }
@@ -25,4 +25,11 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+th {
+  padding: 0.2em;
+  width: 10em;
+}
+tr {
+  height: 1.3em;
 }
