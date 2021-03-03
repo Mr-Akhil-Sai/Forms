@@ -36,3 +36,6 @@ tr {
 table {
   display: none;
 }
+#add{
+	display: none;
+}
