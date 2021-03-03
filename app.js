@@ -1,12 +1,12 @@
 let submitButton = document.querySelector("#submit");
 let tabelDiv = document.querySelector("#tabelDiv");
 let table = document.querySelector("table");
+let name = document.querySelector(".name");
+let phone = document.querySelector(".phone");
+let mail = document.querySelector(".mail");
 
 submitButton.addEventListener("click", () => {
   table.style.display = "block";
-  let name = document.querySelector(".name");
-  let phone = document.querySelector(".phone");
-  let mail = document.querySelector(".mail");
 
   if (name.value != "" && phone.value != "" && mail.value != "") {
     let email = mail.value;
@@ -40,14 +40,19 @@ function clearInputs(name, phone, mail) {
 function deleteFunction(tablerow) {
   let row = tablerow.parentNode.rowIndex;
   table.deleteRow(row);
+	if (row <= 1){
+		console.log("hi");
+		console.log(row);
+	}
 }
 
 function editFunction(tablecol) {
-  let tableData = document.querySelector("td");
-  let name = document.querySelector(".name");
-  console.log(tableData);
-  let i = 0;
-  for (i = 0; i < tableData.length; i++) {
-    console.log(tableData);
-  }
+	let row = tablecol.parentNode;
+	let values = row.innerText;
+	let array = [];
+	let value = values.split("\t");
+	name.value = value[0];
+	phone.value = value[1];
+	mail.value = value[2];
+	
 }
