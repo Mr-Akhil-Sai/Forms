@@ -23,15 +23,15 @@ submitButton.addEventListener("click", () => {
       clearInputs(name, phone, mail);
     } else {
       alert("enter the fields correctly");
-      clearInputs(name, phone, mail);
+      clearInputs();
     }
   } else {
     alert("enter the given fileds");
-    clearInputs(name, phone, mail);
+    clearInputs();
   }
 });
 
-function clearInputs(name, phone, mail) {
+function clearInputs() {
   name.value = "";
   phone.value = "";
   mail.value = "";
@@ -65,6 +65,9 @@ function editFunction(tablecol) {
 		col1.innerText = name.value;
 		col2.innerText = phone.value;
 		col3.innerText = mail.value;
+		addButton.style.display = "none";
+		submitButton.style.display = "block";
+		clearInputs();
 	});
 }
 
