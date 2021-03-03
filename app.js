@@ -16,11 +16,10 @@ submitButton.addEventListener("click", () => {
 			<td>${name.value}</td>
 			<td>${phone.value}</td>
 			<td>${mail.value}</td>
-      <button onclick = "deleteFunction()">delete</button>
+      <button onclick = "deleteFunction(this)">delete</button>
       <button onclick = "editFunction()">edit</button>
 			`;
       table.appendChild(tablerow);
-      console.log(table.innerText);
       clearInputs(name, phone, mail);
     } else {
       alert("enter the fields correctly");
@@ -38,8 +37,9 @@ function clearInputs(name, phone, mail) {
   mail.value = "";
 }
 
-function deleteFunction() {
-  this.remove();
+function deleteFunction(tablerow) {
+  let r = tablerow.parentNode.rowIndex;
+  table.deleteRow(r);
 }
 
 function editFunction() {}
