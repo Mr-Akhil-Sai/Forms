@@ -33,3 +33,6 @@ th {
 tr {
   height: 1.3em;
 }
+table {
+  display: none;
+}
